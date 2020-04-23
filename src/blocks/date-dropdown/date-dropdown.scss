@@ -1,0 +1,80 @@
+.date-dropdown {
+  display: flex;
+
+  &__label {
+    width: 150px;
+    display: block;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: $dark-shade-100;
+  }
+
+  &__start,
+  &__end {
+    margin-top: 5px;
+    width: 150px;
+    display: block;
+    height: 44px;
+
+    background: $white;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+    color: $dark-shade-75;
+
+    padding: 15px 13px;
+    &:hover,
+    &:focus {
+      font-size: 14px;
+      line-height: 24px;
+      /* identical to box height, or 171% */
+
+      border: 1px solid $dark-shade-50;
+    }
+
+    &::placeholder {
+      color: $dark-shade-25;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    &::after {
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      color: $dark-shade-75;
+      content: "keyboard_arrow_down";
+      cursor: pointer;
+      text-transform: lowercase;
+      display: flex;
+      align-items: center;
+      height: 44px;
+      width: 44px;
+      position: absolute;
+      left: 116px;
+      top: 20px;
+    }
+  }
+}

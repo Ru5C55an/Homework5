@@ -1,0 +1,12 @@
+mixin rate-button(options)
+    .rate-button
+        input.rate-button__input(type="radio" id=options.name+"-5" name= options.name value="5")
+        label.rate-button__star(for=options.name+"-5")="star_border"
+        input.rate-button__input(type="radio" id=options.name+"-4" name= options.name value="4")
+        label.rate-button__star(for=options.name+"-4")="star_border"
+        input.rate-button__input(type="radio" id=options.name+"-3" name= options.name value="3")
+        label.rate-button__star(for=options.name+"-3")="star_border"
+        input.rate-button__input(type="radio" id=options.name+"-2" name= options.name value="2")
+        label.rate-button__star(for=options.name+"-2")="star_border"
+        input.rate-button__input(type="radio" id=options.name+"-1" name= options.name value="1")
+        label.rate-button__star(for=options.name+"-1")="star_border"

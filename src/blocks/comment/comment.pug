@@ -1,0 +1,12 @@
+include ../../blocks/like-button/like-button.pug
+
+mixin comment(options)
+    .comment.js-comment
+        .comment__commentator
+            img(src=`img/${options.image}` alt="аватарка" class="comment__image")
+            +like-button({count: options.count})
+            
+        .comment__review
+            .comment__name= options.name
+            .comment__sublabel= options.time
+            .comment__text= options.text

@@ -1,0 +1,85 @@
+.checkbox-button {
+  &__checkbox {
+    opacity: 0;
+  }
+
+  &__checkbox + &__label-checkbox:after {
+    content: none;
+  }
+
+  &__checkbox:checked + &__label-checkbox:after {
+    content: "";
+  }
+
+  &__checkbox:focus + &__label-checkbox:before {
+    border: 1px solid $purple;
+  }
+
+  &__checkbox:checked + &__label-checkbox:before {
+    border: 1px solid $purple;
+  }
+
+  &__label-checkbox {
+    position: relative;
+    display: inline-block;
+
+    width: 200px;
+
+    padding-left: 8px;
+
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+    /* Dark 50% */
+    color: $dark-shade-50;
+
+    &:after {
+      position: absolute;
+      left: -15px;
+      top: 4px;
+      content: "";
+      display: inline-block;
+
+      height: 8px;
+      width: 6px;
+
+      /* Primary Gradient */
+      -webkit-clip-path: polygon(
+        0% 100%,
+        0% 75%,
+        65% 75%,
+        65% 0%,
+        100% 0%,
+        100% 100%
+      );
+      clip-path: polygon(0% 100%, 0% 75%, 65% 75%, 65% 0%, 100% 0%, 100% 100%);
+      background: $gradient;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+
+    &:before {
+      position: absolute;
+      left: -22px;
+      top: -1px;
+      content: "";
+      display: inline-block;
+
+      height: 20px;
+      width: 20px;
+
+      background: $white;
+      /* Dark 25% */
+
+      border: 1px solid $dark-shade-25;
+      box-sizing: border-box;
+      border-radius: 4px;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.checkbox-button:not(:last-child) {
+  margin-bottom: 10px;
+}

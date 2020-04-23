@@ -1,0 +1,52 @@
+.like-button {
+  width: 40px;
+  height: 20px;
+  border: 1px solid $dark-shade-25;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &::before {
+    width: 20px;
+    height: 20px;
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 9px;
+    display: inline-block;
+    content: "favorite_border";
+    color: $dark-shade-25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__counter {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: $dark-shade-25;
+  }
+
+  &_theme_liked {
+    border-color: $purple;
+    &::before {
+      content: "favorite";
+      background: $purple;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .like-button__counter {
+      color: $purple;
+    }
+  }
+}

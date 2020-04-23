@@ -1,0 +1,39 @@
+include ../../blocks/logo/logo.pug
+include ../../blocks/color-block/color-block.pug
+include ../../blocks/text-block/text-block.pug
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Colors & Type
+  body
+    .logo-wrapper
+      +logo
+    .content-wrapper
+      .color-blocks-wrapper
+        .color-block-wrapper
+          +color-block('Dark Shade 100%', '#1F2041', 'dark-shade-100')
+        .color-block-wrapper
+          +color-block('Dark Shade 75%', '#1F2041', 'dark-shade-75')
+        .color-block-wrapper
+          +color-block('Dark Shade 50%', '#1F2041', 'dark-shade-50')
+        .color-block-wrapper
+          +color-block('Dark Shade 25%', '#1F2041', 'dark-shade-25')
+        .color-block-wrapper
+          +color-block('Dark Shade 5%', '#1F2041', 'dark-shade-5')
+        .color-block-wrapper
+          +color-block('Purple', '#BC9CFF', 'purple')
+        .color-block-wrapper
+          +color-block('Green', '#6FCF97', 'green')
+      .text-blocks-wrapper
+        .text-block-wrapper
+          +text-block('H1', 'This one is the sub-section or widget title', 'large', 'title')
+        .text-block-wrapper
+          +text-block('H2', 'Next one is the item title inside widgets', 'medium', 'subtitle')
+        .text-block-wrapper
+          +text-block('H3', 'This is a label or CTA text', 'small', 'label')
+        .text-block-wrapper
+          +text-block('Body', 'This is the body text which is used for most <br> of the design, like paragraphs, lists, etс.', 'normal', 'text')
+

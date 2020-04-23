@@ -1,0 +1,9 @@
+mixin icon-text(options)
+    .icon-text
+        .icon-text__content
+            .icon-text__icon= options.icon
+            .icon-text__text
+                .icon-text__label= options.label
+                .icon-text__sublabel= options.sublabel
+        if(options.border)
+            .icon-text__border

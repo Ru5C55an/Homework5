@@ -1,0 +1,72 @@
+.toggle {
+  display: flex;
+
+  &__input {
+    display: none;
+
+    &,
+    &:after,
+    &:before,
+    & *,
+    & *:after,
+    & *:before,
+    & + .toggle__button {
+      box-sizing: border-box;
+      &::selection {
+        background: none;
+      }
+    }
+
+    + .toggle__button {
+      outline: 0;
+      display: block;
+      width: 40px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      &:after,
+      &:before {
+        position: relative;
+        display: block;
+        content: "";
+        width: 12px;
+        height: 12px;
+      }
+
+      &:after {
+        left: 0;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      padding: 3px;
+      transition: all 0.2s ease;
+      background: $white;
+      border: 1px solid $dark-shade-25;
+      border-radius: 10px;
+      &:after {
+        transition: all 0.2s ease;
+        background: $dark-shade-25;
+        content: "";
+        border-radius: 10px;
+      }
+    }
+
+    &:checked + .toggle__button {
+      border: 1px solid $purple;
+
+      &:after {
+        left: 63%;
+        background: $gradient;
+      }
+    }
+  }
+
+  &__label {
+    line-height: 20px;
+    margin-left: 10px;
+  }
+}
