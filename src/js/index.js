@@ -1,10 +1,11 @@
-import '../scss/style.scss';
-import '../blocks/dropdown/dropdown';
-import '../blocks/expandable-checkbox-list/expandable-checkbox-list';
-import '../blocks/range-slider/range-slider';
-import '../blocks/like-button/like-button';
-import '../blocks/datepicker/datepicker';
-import '../blocks/date-dropdown/date-dropdown';
 import $ from 'jquery';
+ 
+global.jQuery = $;
+global.$ = $;
+
+import '../scss/style.scss';
+
+import 'bootstrap';
 
 require.context('../blocks/', true, /\.(png|svg|jpg)$/);
+require.context('../img/', true, /\.(png|gif|svg|jpg)$/);

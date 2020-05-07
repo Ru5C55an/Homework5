@@ -115,6 +115,7 @@ const plugins = () => {
 				'window.jquery': 'jquery',
 				'window.jQuery': 'jquery', 
 				'window.$': 'jquery',
+				Popper: ['popper.js', 'default'], 
 			}),
 
 			// Automatic creation any html pages (Don't forget to RERUN dev server)

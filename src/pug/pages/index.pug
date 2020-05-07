@@ -1,39 +1,186 @@
 include ../../blocks/logo/logo.pug
-include ../../blocks/color-block/color-block.pug
-include ../../blocks/text-block/text-block.pug
+
 <!DOCTYPE html>
 html(lang="ru")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Colors & Type
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+    title Bootstrap-page
   body
-    .logo-wrapper
-      +logo
-    .content-wrapper
-      .color-blocks-wrapper
-        .color-block-wrapper
-          +color-block('Dark Shade 100%', '#1F2041', 'dark-shade-100')
-        .color-block-wrapper
-          +color-block('Dark Shade 75%', '#1F2041', 'dark-shade-75')
-        .color-block-wrapper
-          +color-block('Dark Shade 50%', '#1F2041', 'dark-shade-50')
-        .color-block-wrapper
-          +color-block('Dark Shade 25%', '#1F2041', 'dark-shade-25')
-        .color-block-wrapper
-          +color-block('Dark Shade 5%', '#1F2041', 'dark-shade-5')
-        .color-block-wrapper
-          +color-block('Purple', '#BC9CFF', 'purple')
-        .color-block-wrapper
-          +color-block('Green', '#6FCF97', 'green')
-      .text-blocks-wrapper
-        .text-block-wrapper
-          +text-block('H1', 'This one is the sub-section or widget title', 'large', 'title')
-        .text-block-wrapper
-          +text-block('H2', 'Next one is the item title inside widgets', 'medium', 'subtitle')
-        .text-block-wrapper
-          +text-block('H3', 'This is a label or CTA text', 'small', 'label')
-        .text-block-wrapper
-          +text-block('Body', 'This is the body text which is used for most <br> of the design, like paragraphs, lists, etс.', 'normal', 'text')
+    header
+      nav.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top
+        .container-fluid
+          a.navbar-brand(href="#")
+            +logo
+          button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarResponsive")
+            span.navbar-toggler-icon
+          .collapse.navbar-collapse(id="navbarResponsive")
+            ul.navbar-nav.ml-auto
+              li.nav-item.active
+                i.glyphicon.glyphicon-search
+                a.nav-link(href="#") Главная    
+              li.nav-item
+                a.nav-link(href="#") О нас
+              li.nav-item
+                a.nav-link(href="#") Контакты
+              li.nav-item
+                a.nav-link(href="#") Актив
+    .container-fluid
+      .carousel.slide(data-ride="carousel" id="slides")
+        ul.carousel-indicators
+          li.active(data-target="#slides" data-slide-to="0")
+          li(data-target="#slides" data-slide-to="1")
+          li(data-target="#slides" data-slide-to="2")
+        .carousel-inner
+          .carousel-item.active
+            img.d-block.w-100(src="img/кроссовок2.jpg", alt="")
+            .carousel-caption
+              h1.display-5 Adidas
+              h3 Новинка
+              button.btn.btn-outline-drk.btn-lg(type="button") Посмотреть
+              button.btn.btn-warning.btn-lg(type="button") Купить
+          .carousel-item
+            img.d-block.w-100(src="img/кроссовок1.jpg", alt="")
+          .carousel-item
+            img.d-block.w-100(src="img/кроссовок3.jpg", alt="")
+    .container-fluid
+      .row.jumbotron
+        .col-xs-12.col-sm-12.col-md-9.col-lg-9.col-xl-10
+          p.lead Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat perferendis iure mollitia voluptatibus incidunt. Hic quos ipsam libero, officiis dolores consequatur adipisci nulla? Odio consequuntur illo possimus distinctio repellendus reprehenderit.
+        .col-xs-12.col-sm-12.col-md-3.col-lg-3.col-xl-2
+          a(href="#")
+            button.btn.btn-success.btn-lg(type="button") Читать далее
+    .container-fluid 
+      .row.text-center.alert
+        .col-12
+          h1.display-4 Новинки
+      br
+      table.table.table-sm.table-dark
+        thead
+          tr
+            th(scope="col") Бренд
+            th(scope="col") Модель
+            th(scope="col") Размеры
+            th(scope="col") Цена
+        tbody
+          tr.table-active 
+            td JORDAN
+            td 5 RETRO (DA1911-102)
+            td  US 8 US 8.5 US 10.5 US 11 US 12 US 12.5 US 13 US 14 US 15
+            td
+              span.badge.badge-danger 15 790 
+                i.glyphicon.glyphicon-ruble
+          tr.table-primary
+            td NIKE
+            td WMNS AIR MAX 90 (CW2654-700)
+            td US 6 US 6.5 US 7 US 7.5 US 8 US 8.5 US 9
+             td
+              span.badge.badge-primary 12 490
+                i.glyphicon.glyphicon-ruble
+          tr.table-info
+            td NIKE
+            td WMNS AIR FORCE 1 '07 (CT4328-100)
+            td US 6 US 7.5 US 8 US 8.5
+             td
+              span.badge.badge-success 8290
+                i.glyphicon.glyphicon-ruble
+            
+            
+    .container-fluid
+      .row.text-center.alert
+        .col-12
+          h1.display-4 Создание сайтов
+        hr
+        .col-12
+          p.lead Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto maxime suscipit quae saepe tempore velit id reiciendis nihil inventore illum veniam rem, debitis esse ipsa optio, vero enim porro sapiente?
+    .container-fluid.padding
+      .row.text-center.padding
+        .col-xs-12.col-sm-6.col-md-4
+          i.fas.fa-html5
+          h3 HTML5
+          p Lorem ipsum, dolor sit amet consectetur adipisicing.
+        .col-xs-12.col-sm-6.col-md-4
+          i.fas.fa-bold
+          h3 Bootstrap
+          p Lorem ipsum, dolor sit amet consectetur adipisicing.
+        .col-xs-12.col-sm-6.col-md-4
+          i.fab.fa-css3
+          h3 CSS3
+          p Lorem ipsum, dolor sit amet consectetur adipisicing.
+      hr.my-4
+      .container-fluid.padding
+        .row.padding
+          .offset-lg-2.col-lg-4
+            h2 Что-то про кроссовки
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam numquam itaque provident quae, ipsa, deserunt, magnam eum tempora quos delectus nulla dolore sequi debitis enim nam minima similique? A, dolorum! 
+            br
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate fugiat ut minima sed ducimus? Expedita tempore excepturi voluptatem cumque maiores. Quo veniam laudantium recusandae quisquam nihil expedita ipsa deleniti atque.
+            br
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus facilis dolor cum ad harum ipsa deleniti magni placeat, odio quia, non autem distinctio! Iusto obcaecati eius tempore autem hic minus.
+            br
+            a.btn.btn-danger(href="#") Читать далее
+          .col-lg-6
+            br
+            img.img-fluid(src="", alt="")
+      figure
+        .fixed-wrap
+          #fixed
+      .text-center
+        button.btn.btn-success.text-center(type="button" data-toggle="collapse" data-target="#gifs" id="gifsBtn") Открыть блок
+      #gifs.collapse
+        .container-fluid.padding
+          .row.text-center
+            .col-sm-6.col-md-3
+              img.gif(src="img/gif_1.gif", alt="")
+            .col-sm-6.col-md-3
+              img.gif(src="img/gif_2.gif", alt="")
+            .col-sm-6.col-md-3
+              img.gif(src="img/gif_3.gif", alt="")
+            .col-sm-6.col-md-3
+              img.gif(src="img/gif_4.gif", alt="")
+      .container-fluid.padding
+        .row.alert.text-center
+          .col-12
+            h1.display-4 Бренды кроссовок
+            hr
+      .container-fluid.padding
+        .row.padding
+          .col-md-4
+            .card
+              img.card-img-top(src="https://i.pinimg.com/originals/ba/db/31/badb3138cf30ee6b3b2b05af5008e720.jpg", alt="")
+              .card-body
+                h4.card-title Nike
+                p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id corporis recusandae eum reprehenderit optio illum corrupti voluptates commodi laudantium. Vel ut facilis minus nam harum enim temporibus et labore?
+                a.btn.btn-warning(href="#") Посмотреть
+          .col-md-4
+            .card
+              img.card-img-top(src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1200px-Adidas_Logo.svg.png", alt="")
+              .card-body
+                h4.card-title Adidas
+                p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id corporis recusandae eum reprehenderit optio illum corrupti voluptates commodi laudantium. Vel ut facilis minus nam harum enim temporibus et labore?
+                a.btn.btn-warning(href="#") Посмотреть
+          .col-md-4
+            .card
+              img.card-img-top(src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSIV1IMwELvsnKe3WqpnocsLWxQaifLvOHmJpsh5yd8NaEPZTbI&usqp=CAU", alt="")
+              .card-body
+                h4.card-title Reebok
+                p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id corporis recusandae eum reprehenderit optio illum corrupti voluptates commodi laudantium. Vel ut facilis minus nam harum enim temporibus et labore?
+                a.btn.btn-warning(href="#") Посмотреть
+      .footer.container-fluid
+        .container-fluid
+          .row.padding.text-center
+            .col-12
+              h2 Наши контакты
+            .col-12.social.padding
+              a(href="#")
+                i.glyphicon.glyphicon-search
+              a(href="#")
+                i.fab.fa-instagram
+              a(href="#")
+                i.fab.fa-youtube
+              a(href="#")
+                i.fab.fa-facebook
+  script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous")
+  script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous")
+  script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous") 
 
