@@ -92,8 +92,14 @@ body {
   margin-bottom: 20px;
 }
 
+.media-object img {
+  max-width: 100%;
+  max-height: 200px;
+  margin-bottom: 20px;
+}
+
  .social a {
-  font-size: 4em;
+  font-size: 10em;
   padding: 20px;
 }
 
@@ -133,8 +139,8 @@ footer {
   }
 }
 
-#navbarResponsive {
-  i {
-    font-size: 1em;
-  }
+.breadcrumb > li + li:before {
+  color: #cccccc;
+  content: "/";
+  padding: 0 5px;
 }
