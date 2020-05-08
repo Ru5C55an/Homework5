@@ -7,6 +7,7 @@ import '../scss/style.scss';
 
 import 'bootstrap';
 
+require.context('../blocks/', true, /\.(png|gif|svg|jpg)$/);
 require.context('../img/', true, /\.(png|gif|svg|jpg)$/);
 
 $('#btn-tooltip').tooltip();
