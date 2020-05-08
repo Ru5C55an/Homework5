@@ -1,6 +1,0 @@
-mixin radio-button(items = [])
-    each item in items
-        .radio-button
-            - const {label, id, name} = item
-            input(class="radio-button__radio" type="radio" id= id  name= name)
-            label(class="radio-button__label text" for= id)= label
