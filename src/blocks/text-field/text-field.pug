@@ -4,8 +4,8 @@ mixin text-field(options)
     .text-field
         if options.label
             label(class="label text-field__label")= options.label
-                input(class="text-field__text" id= options.id placeholder= options.placeholder type= options.type options.other #{$options} pattern= options.pattern)
+                input(class="text-field__text" id= options.id placeholder= options.placeholder type= options.type options.other #{$options} min= options.min max= options.max pattern= options.pattern)
         else
-            input(class="text-field__text" id= options.id placeholder= options.placeholder type= options.type options.other #{$options} pattern= options.pattern)
+            input(class="text-field__text" id= options.id placeholder= options.placeholder type= options.type options.other #{$options} min= options.min max= options.max pattern= options.pattern)
 
         
