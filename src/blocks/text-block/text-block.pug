@@ -1,0 +1,5 @@
+mixin text-block(textIcon, text, iconSize, textType)
+    .text-block
+        .text-block__text-icon(class='text-block__text-icon_size-' + iconSize)= textIcon
+        .text-block__title(class=textType)!= text
+        

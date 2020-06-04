@@ -1,0 +1,6 @@
+include ../../blocks/checkbox-button/checkbox-button.pug
+mixin expandable-checkbox-list(title, array = [])
+    .expandable-checkbox-list.js-expandable-checkbox-list 
+        .expandable-checkbox-list__title.js-expandable-checkbox-list__title= title
+        .expandable-checkbox-list__menu.js-expandable-checkbox-list__menu
+            +checkbox-button(array)          

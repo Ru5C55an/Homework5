@@ -2,145 +2,62 @@
 @import "colors.scss";
 @import "~material-design-icons/iconfont/material-icons.css";
 
-@import "~bootstrap/scss/bootstrap";
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+@import "../blocks/label/label.scss";
+@import "../blocks/text-field/text-field.scss";
 
 html,
 body {
-  width: 100%;
   height: 100%;
-  font-family: "Montserrat";
-  color: #222;
+  background-color: rgb(32, 32, 32);
 }
 
-.navbar-nav li {
-  padding-right: 20px;
+header {
+  display: flex;
+  justify-content: center;
+  .label {
+    color: $white;
+    font-size: large;
+  }
+}
+article {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 25px;
+  justify-content: space-evenly;
 }
 
-.navbar-link {
-  font-size: 1.1em !important;
-}
-
-.carousel-caption {
-  text-shadow: 1px 1px 10px #000;
-}
-
-.jumbotron {
-  padding: 1em;
-  border-radius: 0;
-  width: 70%;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.padding {
-  padding-bottom: 2em;
-}
-
-.alert {
-  width: 75%;
-  margin: 0 auto;
-  padding-top: 2em;
-}
-
-.alert hr {
-  border-top: 2px solid #f0f0f0;
-  width: 95%;
-  margin-top: 0.3em;
-  margin-bottom: 1em;
-}
-
-.fa-html5 {
-  color: #e54d26;
-}
-
-.fa-bold {
-  color: #563d7c;
-}
-
-.fa-css3 {
-  color: #2163af;
-}
-
-.fa-html5,
-.fa-bold,
-.fa-css3 {
-  font-size: 4em;
-  margin: 1em;
-}
-
-#fixed {
-  height: 400px;
-  border-top: 4px solid #f0f0f0;
-  border-bottom: 4px solid #f0f0f0;
-  background: url("../img/bg.jpg") no-repeat center center fixed;
-  background-blend-mode: multiply;
-  background-color: red;
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-}
-
-#gifsBtn {
-  margin-bottom: 20px;
-}
-
-#gifs img {
-  max-width: 100%;
-  max-height: 200px;
-  margin-bottom: 20px;
-}
-
-.media-object img {
-  max-width: 100%;
-  max-height: 200px;
-  margin-bottom: 20px;
-}
-
- .social a {
-  font-size: 10em;
-  padding: 20px;
-}
-
-.fa-facebook {
-  color: blue;
-}
-
-.fa-instagram {
-  color: purple;
-}
-
-.fa-twitter {
-  color: skyblue;
-}
-
-.fa-youtube {
-  color: red;
-}
-
-.fa-facebook:hover,
-.fa-instagram:hover,
-.fa-twitter:hover,
-.fa-youtube:hover {
-  color: #ccc;
-}
-
-footer {
-  background-color: #3f3f3f;
-  padding-top: 50px;
-  border-top: 4px solid silver;
-  color: white;
-}
-
-@media (max-width: 750px) {
-  display-4 {
-    font-size: 1.5em;
+.rect {
+  .label {
+    color: red;
   }
 }
 
-.breadcrumb > li + li:before {
-  color: #cccccc;
-  content: "/";
-  padding: 0 5px;
+.circle {
+  .label {
+    color: orange;
+  }
+}
+
+.ellipse {
+  .label {
+    color: yellow;
+  }
+}
+
+.parallelogram {
+  .label {
+    color: green;
+  }
+}
+
+.trapecia {
+  .label {
+    color: lighten(blue, 20%);
+  }
+}
+
+.triangle {
+  .label {
+    color: lighten(purple, 10%);
+  }
 }

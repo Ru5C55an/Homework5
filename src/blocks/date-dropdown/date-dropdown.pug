@@ -1,0 +1,15 @@
+mixin date-dropdown(options)
+    -let id = options.id
+    .date-dropdown.js-date-dropdown
+        .date-dropdown__wrapper
+            if options.labelFrom
+                label.date-dropdown__label(for= options.id)=options.labelFrom
+                    input(type="text" id= options.id class="date-dropdown__start js-date-dropdown__start" data-range= options.range placeholder= options.placeholder data-multiple-dates-separator="-") 
+            else
+                input(type="text" id= options.id class="date-dropdown__start js-date-dropdown__start" data-range= options.range placeholder= options.placeholder data-multiple-dates-separator="-")
+        .date-dropdown__wrapper
+            if options.labelTo
+                label.date-dropdown__label(for= options.id+'1')=options.labelTo
+                    input(type="text" id= options.id+'1' class="date-dropdown__end js-date-dropdown__end" data-range= options.range placeholder= options.placeholder) 
+            else
+                input(type="text" id= options.id+'1' class="date-dropdown__end js-date-dropdown__end" data-range= options.range placeholder= options.placeholder)

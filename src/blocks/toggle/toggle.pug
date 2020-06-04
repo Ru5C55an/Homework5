@@ -1,0 +1,7 @@
+mixin toggle(options)
+    .toggle
+        .div
+            input.toggle__input(type = "checkbox" id= options.id)
+            label.toggle__button(for= options.id) 
+        .toggle__label.text= options.label
+

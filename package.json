@@ -1,7 +1,7 @@
 {
-  "name": "BootstrapEducation",
+  "name": "HW4",
   "version": "1.0.0",
-  "description": "bootstrap project",
+  "description": "hw4",
   "private": true,
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -16,7 +16,7 @@
   "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ru5C55an/BootstrapEducation"
+    "url": "git+https://github.com/Ru5C55an/Homework4"
   },
   "keywords": [
     "javascript",
@@ -26,9 +26,9 @@
   "author": "Ruslan Sadykov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ru5C55an/BootstrapEducation/issues"
+    "url": "https://github.com/Ru5C55an/Homework4/issues"
   },
-  "homepage": "https://github.com/Ru5C55an/BootstrapEducation#readme",
+  "homepage": "https://github.com/Ru5C55an/Homework4#readme",
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",

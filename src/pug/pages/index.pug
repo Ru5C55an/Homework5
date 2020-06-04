@@ -1,216 +1,44 @@
 include ../../blocks/logo/logo.pug
+include ../../blocks/label/label.pug
+include ../../blocks/text-field/text-field.pug
 
 <!DOCTYPE html>
 html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
-    title Bootstrap-page
-    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous")
+    title Калькулятор
   body
     header
-      nav.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top
-        .container-fluid
-          a.navbar-brand(href="index.html")
-            +logo
-          button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarResponsive")
-            span.navbar-toggler-icon
-          .collapse.navbar-collapse(id="navbarResponsive")
-            ul.navbar-nav.ml-auto
-              li.nav-item.active
-                a.nav-link(href="index.html") Главная    
-              li.nav-item
-                a.nav-link(href="about.html") О нас
-    .container-fluid
-      .carousel.slide(data-ride="carousel" id="slides")
-        ul.carousel-indicators
-          li.active(data-target="#slides" data-slide-to="0")
-          li(data-target="#slides" data-slide-to="1")
-          li(data-target="#slides" data-slide-to="2")
-        .carousel-inner
-          .carousel-item.active
-            img.d-block.w-100(src="img/кроссовок2.jpg", alt="")
-            .carousel-caption
-              h1.display-5 Adidas
-              h3 Новинка
-              button.btn.btn-outline-drk.btn-lg(type="button") Посмотреть
-              button.btn.btn-warning.btn-lg(type="button") Купить
-          .carousel-item
-            img.d-block.w-100(src="img/кроссовок1.jpg", alt="")
-          .carousel-item
-            img.d-block.w-100(src="img/кроссовок3.jpg", alt="")
-    .container-fluid
-      .row.jumbotron
-        .col-xs-12.col-sm-12.col-md-9.col-lg-9.col-xl-10
-          p.lead Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat perferendis iure mollitia voluptatibus incidunt. Hic quos ipsam libero, officiis dolores consequatur adipisci nulla? Odio consequuntur illo possimus distinctio repellendus reprehenderit.
-        .col-xs-12.col-sm-12.col-md-3.col-lg-3.col-xl-2
-          a(href="https://macgamez-download.com/2017/11/stikbold-a-dodgeball-adventure-macosx-activated-cracked-download/")
-            button.btn.btn-success.btn-lg(type="button") Читать далее
-    .container-fluid 
-      .row.text-center.alert
-        .col-12
-          h1.display-4 Новинки
-      br
-      table.table.table-sm.table-dark
-        thead
-          tr
-            th(scope="col") Бренд
-            th(scope="col") Модель
-            th(scope="col") Размеры
-            th(scope="col") Цена
-        tbody
-          tr.table-active 
-            td JORDAN
-            td 5 RETRO (DA1911-102)
-            td  US 8 US 8.5 US 10.5 US 11 US 12 US 12.5 US 13 US 14 US 15
-            td
-              span.badge.badge-danger 15 790 
-                i.glyphicon.glyphicon-ruble
-          tr.table-primary
-            td NIKE
-            td WMNS AIR MAX 90 (CW2654-700)
-            td US 6 US 6.5 US 7 US 7.5 US 8 US 8.5 US 9
-             td
-              span.badge.badge-primary 12 490
-                i.glyphicon.glyphicon-ruble
-          tr.table-info
-            td NIKE
-            td WMNS AIR FORCE 1 '07 (CT4328-100)
-            td US 6 US 7.5 US 8 US 8.5
-             td
-              span.badge.badge-success 8290
-                i.glyphicon.glyphicon-ruble
-            
-    .container-fluid.padding
-      ul.nav.nav-tabs(id="tab-example" role="tablist")
-        li.nav-item
-          a.nav-link.active(id="first-tab" data-toggle="tab" href="#first-tab-content" role="tab" aria-controls="first-tab-content" aria-selected="true") Первая ссылка
-        li.nav-item
-          a.nav-link(id="second-tab" data-toggle="tab" href="#second-tab-content" role="tab" aria-controls="second-tab-content" aria-selected="false") Вторая ссылка
-        li.nav-item
-          a.nav-link(id="third-tab" data-toggle="tab" href="#third-tab-content" role="tab" aria-controls="third-tab-content" aria-selected="false") Третья ссылка
-
-      .tab-content(id="tab-content-example")
-        .tab-pane.fade.show.active(id="first-tab-content" role="tabpanel" aria-labelledby="first-tab")
-          h3 Первый заголовок
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            | nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        .tab-pane.fade(id="second-tab-content" role="tabpanel" aria-labelledby="second-tab")
-          h3 Второй заголовок
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            | nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        .tab-pane.fade(id="third-tab-content" role="tabpanel" aria-labelledby="third-tab")
-          h3 Третий заголовок
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            | nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    .container-fluid.media-object
-      .media
-        img.mr-3(src="img/gif_3.gif" alt="...")
-        .media-body
-            h5.mt-0 Медиа объект
-            div.media.mt-3
-                img.mr-3(src="img/gif_1.gif" alt="...")
-                .media-body
-                    h5.mt-0 Медиа объект
-    .container-fluid
-      .row.text-center.alert
-        .col-12
-          h1.display-4 Создание сайтов
-        hr
-        .col-12
-          p.lead Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto maxime suscipit quae saepe tempore velit id reiciendis nihil inventore illum veniam rem, debitis esse ipsa optio, vero enim porro sapiente?
-    .container-fluid.padding
-      .row.text-center.padding
-        .col-xs-12.col-sm-6.col-md-4
-          i.fas.fa-html5
-          h3 HTML5
-          p Lorem ipsum, dolor sit amet consectetur adipisicing.
-        .col-xs-12.col-sm-6.col-md-4
-          i.fas.fa-bold
-          h3 Bootstrap
-          p Lorem ipsum, dolor sit amet consectetur adipisicing.
-        .col-xs-12.col-sm-6.col-md-4
-          i.fab.fa-css3
-          h3 CSS3
-          p Lorem ipsum, dolor sit amet consectetur adipisicing.
-      hr.my-4
-      .container-fluid.padding
-        .row.padding
-          .offset-lg-2.col-lg-4
-            h2 Что-то про кроссовки
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam numquam itaque provident quae, ipsa, deserunt, magnam eum tempora quos delectus nulla dolore sequi debitis enim nam minima similique? A, dolorum! 
-            br
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate fugiat ut minima sed ducimus? Expedita tempore excepturi voluptatem cumque maiores. Quo veniam laudantium recusandae quisquam nihil expedita ipsa deleniti atque.
-            br
-            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus facilis dolor cum ad harum ipsa deleniti magni placeat, odio quia, non autem distinctio! Iusto obcaecati eius tempore autem hic minus.
-            br
-            a.btn.btn-danger(href="#") Читать далее
-          .col-lg-6
-            br
-            img.img-fluid(src="", alt="")
-      figure
-        .fixed-wrap
-          #fixed
-      .text-center
-        button.btn.btn-success.text-center(type="button" data-toggle="collapse" data-target="#gifs" id="gifsBtn") Открыть блок
-      #gifs.collapse
-        .container-fluid.padding
-          .row.text-center
-            .col-sm-6.col-md-3
-              img.gif(src="img/gif_1.gif", alt="")
-            .col-sm-6.col-md-3
-              img.gif(src="img/gif_2.gif", alt="")
-            .col-sm-6.col-md-3
-              img.gif(src="img/gif_3.gif", alt="")
-            .col-sm-6.col-md-3
-              img.gif(src="img/gif_4.gif", alt="")
-      .container-fluid.padding
-        .row.alert.text-center
-          .col-12
-            h1.display-4 Бренды кроссовок
-            hr
-      .container-fluid.padding
-        .row.padding
-          .col-md-4
-            .card
-              img.card-img-top(src="https://i.pinimg.com/originals/ba/db/31/badb3138cf30ee6b3b2b05af5008e720.jpg", alt="")
-              .card-body
-                h4.card-title Nike
-                p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id corporis recusandae eum reprehenderit optio illum corrupti voluptates commodi laudantium. Vel ut facilis minus nam harum enim temporibus et labore?
-                a.btn.btn-warning(href="https://www.nike.com/ru/?cp=95815615801_search_|nike|373472226|23188722066|e|c|RU|pure|427740473663&gclsrc=aw.ds&ds_rl=1252249&gclid=EAIaIQobChMI-bqhhtah6QIVTZSyCh0bUwB_EAAYASAAEgLi9vD_BwE&gclsrc=aw.ds") Посмотреть
-          .col-md-4
-            .card
-              img.card-img-top(src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1200px-Adidas_Logo.svg.png", alt="")
-              .card-body
-                h4.card-title Adidas
-                p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id corporis recusandae eum reprehenderit optio illum corrupti voluptates commodi laudantium. Vel ut facilis minus nam harum enim temporibus et labore?
-                a.btn.btn-warning(href="https://www.adidas.ru/?cm_mmc=AdieSEM_Google-_-adidas-Brand-B-Exact-Desktop-_-adidas_brand-_-adidas-_-dv%3AeCom-_-cn%3Aadidas-Brand-B-Exact-Desktop-_-pc%3AGoogle&cm_mmc1=&cm_mmc2=PPC-B-Multiple-Multiple-Exact-RU-CIS-eCom-Paid_Search&gclid=EAIaIQobChMI3LfU_9Wh6QIVgsYYCh19aQFqEAAYASAAEgKaaPD_BwE") Посмотреть
-          .col-md-4
-            .card
-              img.card-img-top(src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSIV1IMwELvsnKe3WqpnocsLWxQaifLvOHmJpsh5yd8NaEPZTbI&usqp=CAU", alt="")
-              .card-body
-                h4.card-title Reebok
-                p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id corporis recusandae eum reprehenderit optio illum corrupti voluptates commodi laudantium. Vel ut facilis minus nam harum enim temporibus et labore?
-                a.btn.btn-warning(href="https://www.reebok.ru/sport?cm_mmc=ReebokSEM_Google-_-brand-_-Reebok-BMM-desktop-_-reebok-_-dv%3AeCom-_-cn%3Abrand-_-pc%3AGoogle&cm_mmc1=RU&cm_mmc2=PPC-TM-Allproducts-None-BMM-RU-CIS-eCom-Paid_Search&gclid=EAIaIQobChMIxYCEj9ah6QIVxOAYCh0BtQhJEAAYASAAEgIUVPD_BwE") Посмотреть
-      .footer.container-fluid
-        .container-fluid
-          .row.padding.text-center
-            .col-12
-              h2 Наши контакты
-            .col-12.social.padding
-              a(href="https://www.instagram.com/")
-                i.fab.fa-instagram
-              a(href="https://www.youtube.com/")
-                i.fab.fa-youtube
-              a(href="https://www.facebook.com/")
-                i.fab.fa-facebook
-  script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous")
-  script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous")
-  script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous") 
+      +label({text: "Рассчет площади фигур"})
+    article  
+      .rect
+        +label({text: "Квадрат"})
+        +text-field({label: "Введите длинну сторон", id: "rect1", pattern: "^[ 0-9]+$"})
+        +label({text: "Результат: ", id: "rectresult"})
+      .circle
+        +label({text: "Круг"})
+        +text-field({label: "Введите радиус", id: "circle1", pattern: "^[ 0-9]+$"})
+        +label({text: "Результат: ", id: "circleresult"})
+      .ellipse
+        +label({text: "Эллипс"})
+        +text-field({label: "Введите длинну большой полуоси", id: "ellipse1", pattern: "^[ 0-9]+$"})
+        +text-field({label: "Введите длинну малой полуоси", id: "ellipse2", pattern: "^[ 0-9]+$"})
+        +label({text: "Результат: ", id: "ellipseresult"})
+      .parallelogram
+        +label({text: "Параллелограмм"})
+        +text-field({label: "Введите основание", id: "parallelogram1", pattern: "^[ 0-9]+$"})
+        +text-field({label: "Введите высоту", id: "parallelogram2", pattern: "^[ 0-9]+$"})
+        +label({text: "Результат: ", id: "parallelogramresult"})
+      .trapecia
+        +label({text: "Трапеция"})
+        +text-field({label: "Введите основание (a)", id: "trapecia1", pattern: "^[ 0-9]+$"})
+        +text-field({label: "Введите основание (b)", id: "trapecia2", pattern: "^[ 0-9]+$"})
+        +text-field({label: "Введите высоту", id: "trapecia3", pattern: "^[ 0-9]+$"})
+        +label({text: "Результат: ", id: "trapeciaresult"})
+      .triangle
+        +label({text: "Треугольник"})
+        +text-field({label: "Введите основание", id: "triangle1", pattern: "^[ 0-9]+$"})
+        +text-field({label: "Введите высоту", id: "triangle2", pattern: "^[ 0-9]+$"})
+        +label({text: "Результат: ", id: "triangleresult"})
 

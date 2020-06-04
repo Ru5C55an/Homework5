@@ -1,0 +1,53 @@
+.icon-text {
+  &__content {
+    display: flex;
+  }
+
+  &__icon {
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 41px;
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  &__label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+    color: $dark-shade-75;
+  }
+
+  &__sublabel {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+
+    color: $dark-shade-75;
+  }
+
+  &__border {
+    margin-top: 20px;
+    width: 280px;
+    height: 1px;
+    background: $dark-shade-10;
+  }
+}

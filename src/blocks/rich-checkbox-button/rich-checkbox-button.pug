@@ -1,0 +1,5 @@
+mixin rich-checkbox-button(options)
+    .rich-checkbox-button
+        input(class="rich-checkbox-button__checkbox" type="checkbox" id= options.id  name= options.name)
+        label(class="rich-checkbox-button__label" for= options.id)= options.label
+        .rich-checkbox-button__description= options.description
