@@ -12,151 +12,127 @@ require.context('../img/', true, /\.(png|gif|svg|jpg)$/);
 
 $('#btn-tooltip').tooltip();
 
-var rect1 = document.getElementById('rect1');
-var rectresult = document.getElementById('rectresult');
-rect1.oninput = function() {
-    var a = rect1.value;
-    let S = a * a;
-    if (a < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        rectresult.innerHTML = "Результат: ";
-        rect1.value = undefined; 
-    }
-    else {
-        rectresult.innerHTML = "Результат: " + S;
-    }
-}
+var firstbutton = document.getElementById('first');
+var secondbutton = document.getElementById('second');
 
-var circle1 = document.getElementById('circle1');
-var circleresult = document.getElementById('circleresult');
-circle1.oninput = function() {
-    var R = circle1.value;
-    let S = Math.PI * R * R;
-    if (R < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        circleresult.innerHTML = "Результат: ";
-        circle1.value = undefined; 
+firstbutton.addEventListener("click", function(){
+    var animals = {
+        
+        text:"Животные",
+        childs:[
+            {   
+                text: "Млекопитающие",
+                childs: [
+                    {text: "Коровы"},
+                    {text: "Ослы"},
+                    {text: "Собаки"},
+                    {text: "Тигры"}
+                ]
+            },
+            {
+                text: "Другие",
+                childs: [
+                    {text: "Змеи"}, 
+                    {text: "Птицы"}, 
+                    {text: "Ящерицы"}
+                ]
+            }
+        ]
     }
-    else {
-        circleresult.innerHTML = "Результат: " + S;
+    var fish = {
+        text: "Рыбы",
+        childs: [
+            {
+                text: "Аквариумные", 
+                childs: [
+                    {text: "Гуппи"}, 
+                    {text: "Скалярии"}
+                ]
+            }, 
+            {
+                text: "Морские",
+                childs: [
+                    {text: "Морская форель"}
+                ]
+            }
+        ]
     }
     
-}
+    var tree = document.createElement("ul")
+    formation(tree, animals)    
+    formation(tree, fish)
+    var body = document.getElementsByTagName("body")
+    body[0].appendChild(tree)
+    
+    function formation(top, block)
+    {
+        var current = document.createElement("li")
+        current.innerHTML = block.text
+        if (block.hasOwnProperty("childs")) {
+            var child = document.createElement("ul")
+            for (let i of block.childs)
+            {
+                formation(child,i)
+            }
+            current.appendChild(child)
+        }
+        top.appendChild(current)
+    }
+    
+    function recursion(parent_node)
+    {
+        console.log(parent_node);
+        let s = parent_node.children
+        if (s.length > 0)
+        {
+            for( let i = 0; i < s.length; i++)
+                recursion(s[i]);
+        }    
+    }
+    
+    recursion(document.getElementById("html"))
+});
 
-var ellipse1 = document.getElementById('ellipse1');
-var ellipse2 = document.getElementById('ellipse2');
-var ellipseresult = document.getElementById('ellipseresult');
-ellipse1.oninput = function () {
-    var a = ellipse1.value;
-    var b = ellipse2.value;
-    let S = Math.PI * a * b;
-    if (a < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        ellipseresult.innerHTML = "Результат: ";
-        ellipse1.value = undefined; 
+secondbutton.addEventListener("click", function(){
+    var animals = {
+        text: "Животные",
+        children: [{ text: "Млекопитающие", children: [{ text: "Коровы" }, { text: "Ослы" }, { text: "Собаки" }, { text: "Тигры" }] }, { text: "Другие", children: [{ text: "Змеи" }, { text: "Птицы" }, { text: "Ящерицы" }] }]
     }
-    else ellipseresult.innerHTML = "Результат: " + S;
-}
-ellipse2.oninput = function () {
-    var a = ellipse1.value;
-    var b = ellipse2.value;
-    let S = Math.PI * a * b;
-    if (b < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        ellipseresult.innerHTML = "Результат: ";
-        ellipse2.value = undefined; 
+    var fish = {
+        text: "Рыбы",
+        children: [{ text: "Аквариумные", children: [{ text: "Гуппи" }, { text: "Скалярии" }] }, { text: "Морские", children: [{ text: "Морская форель" }] }]
     }
-    else ellipseresult.innerHTML = "Результат: " + S;
-}
 
-var parallelogram1 = document.getElementById('parallelogram1');
-var parallelogram2 = document.getElementById('parallelogram2');
-var parallelogramresult = document.getElementById('parallelogramresult');
-parallelogram1.oninput = function () {
-    var a = parallelogram1.value;
-    var h = parallelogram2.value;
-    let S = a * h;
-    if (a < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        parallelogramresult.innerHTML = "Результат: ";
-        parallelogram1.value = undefined; 
-    } else parallelogramresult.innerHTML = "Результат: " + S;
-}
-parallelogram2.oninput = function () {
-    var a = parallelogram1.value;
-    var h = parallelogram2.value;
-    let S = a * h;
-    if (h < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        parallelogramresult.innerHTML = "Результат: ";
-        parallelogram2.value = undefined; 
-    }
-    else parallelogramresult.innerHTML = "Результат: " + S;
-}
+    const all = [animals, fish]
 
-var trapecia1 = document.getElementById('trapecia1');
-var trapecia2 = document.getElementById('trapecia2');
-var trapecia3 = document.getElementById('trapecia3');
-var trapeciaresult = document.getElementById('trapeciaresult');
-trapecia1.oninput = function () {
-    var a = trapecia1.value;
-    var b = trapecia2.value;
-    var h = trapecia3.value;
-    let S = (1 / 2) * (+a + +b) * h;
-    if (a < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        trapeciaresult.innerHTML = "Результат: ";
-        trapecia1.value = undefined; 
-    }
-    else trapeciaresult.innerHTML = "Результат: " + S;
-}
-trapecia2.oninput = function () {
-    var a = trapecia1.value;
-    var b = trapecia2.value;
-    var h = trapecia3.value;
-    let S = (1 / 2) * (+a + +b) * h;
-    if (b < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        trapeciaresult.innerHTML = "Результат: ";
-        trapecia2.value = undefined; 
-    }
-    else trapeciaresult.innerHTML = "Результат: " + S;
-}
-trapecia3.oninput = function () {
-    var a = trapecia1.value;
-    var b = trapecia2.value;
-    var h = trapecia3.value;
-    let S = (1 / 2) * (+a + +b) * h;
-    if (h < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        trapeciaresult.innerHTML = "Результат: ";
-        trapecia3.value = undefined; 
-    }
-    else trapeciaresult.innerHTML = "Результат: " + S;
-}
+    const root = $('#root')
 
-var triangle1 = document.getElementById('triangle1');
-var triangle2 = document.getElementById('triangle2');
-var triangleresult = document.getElementById('triangleresult');
-triangle1.oninput = function () {
-    var a = triangle1.value;
-    var h = triangle2.value;
-    let S = (1 / 2 ) * a * h;
-    if (a < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        triangleresult.innerHTML = "Результат: ";
-        triangle1.value = undefined; 
+    const generate = (structure, parent) => {
+        parent.append('<ul></ul>')
+
+        if (!structure) return
+
+        for (let i = 0; i < structure.length; i++) {
+            const contains = structure[i].children ? `[${structure[i].children.length}]` : ''
+            parent.children("ul").append(`<li><span>${structure[i].text}</span> <span class="count"></span></li>`)
+            generate(structure[i].children, parent.children("ul").children('li:last-child'))
+        }
     }
-    else triangleresult.innerHTML = "Результат: " + S;
-}
-triangle2.oninput = function () {
-    var a = triangle1.value;
-    var h = triangle2.value;
-    let S = (1 / 2 ) * a * h;
-    if (h < 0) {
-        alert('Нельзя вводить отрицательные числа');
-        triangleresult.innerHTML = "Результат: ";
-        triangle2.value = undefined; 
+
+    const count = (element) => {
+        return element.find('li').length
     }
-    else triangleresult.innerHTML = "Результат: " + S;
-}
+
+    generate(all, root)
+
+
+    $('li').each(function() {
+        const counter = count($(this))
+        $(this).children('.count').addClass(counter > 0 ? 'red' : 'gray').html(`[${counter}]`)
+    })
+
+    $('li').click(function () {
+        $(this).children().not('span').slideToggle()
+        event.stopPropagation()
+    })
+});  

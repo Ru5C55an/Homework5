@@ -1,6 +1,7 @@
 include ../../blocks/logo/logo.pug
 include ../../blocks/label/label.pug
 include ../../blocks/text-field/text-field.pug
+include ../../blocks/button/button.pug
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -9,36 +10,7 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
     title Калькулятор
   body
-    header
-      +label({text: "Рассчет площади фигур"})
-    article  
-      .rect
-        +label({text: "Квадрат"})
-        +text-field({label: "Введите длинну сторон", id: "rect1", pattern: "^[ 0-9]+$", type: "number"})
-        +label({text: "Результат: ", id: "rectresult"})
-      .circle
-        +label({text: "Круг"})
-        +text-field({label: "Введите радиус", id: "circle1", pattern: "^[ 0-9]+$", type: "number"})
-        +label({text: "Результат: ", id: "circleresult"})
-      .ellipse
-        +label({text: "Эллипс"})
-        +text-field({label: "Введите длинну большой полуоси", id: "ellipse1", pattern: "^[ 0-9]+$", type: "number"})
-        +text-field({label: "Введите длинну малой полуоси", id: "ellipse2", pattern: "^[ 0-9]+$", type: "number"})
-        +label({text: "Результат: ", id: "ellipseresult"})
-      .parallelogram
-        +label({text: "Параллелограмм"})
-        +text-field({label: "Введите основание", id: "parallelogram1", pattern: "^[ 0-9]+$", type: "number"})
-        +text-field({label: "Введите высоту", id: "parallelogram2", pattern: "^[ 0-9]+$", type: "number"})
-        +label({text: "Результат: ", id: "parallelogramresult"})
-      .trapecia
-        +label({text: "Трапеция"})
-        +text-field({label: "Введите основание (a)", id: "trapecia1", pattern: "^[ 0-9]+$", type: "number"})
-        +text-field({label: "Введите основание (b)", id: "trapecia2", pattern: "^[ 0-9]+$", type: "number"})
-        +text-field({label: "Введите высоту", id: "trapecia3", pattern: "^[ 0-9]+$", type: "number"})
-        +label({text: "Результат: ", id: "trapeciaresult"})
-      .triangle
-        +label({text: "Треугольник"})
-        +text-field({label: "Введите основание", id: "triangle1", pattern: "^[ 0-9]+$", type: "number"})
-        +text-field({label: "Введите высоту", id: "triangle2", pattern: "^[ 0-9]+$", type: "number"})
-        +label({text: "Результат: ", id: "triangleresult"})
-
+      +button({id: "first", theme: "theme_long", type: "submit", text: "5.1, 5.2"})
+      +button({id: "second", theme: "theme_long", type: "submit", text: "5.3"})
+      div(id="root")
+    

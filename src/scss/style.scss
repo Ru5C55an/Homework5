@@ -1,62 +1,15 @@
 @import "fonts.scss";
 @import "colors.scss";
 @import "~material-design-icons/iconfont/material-icons.css";
+@import "../../src/blocks/button/button.scss";
 
-@import "../blocks/label/label.scss";
-@import "../blocks/text-field/text-field.scss";
-np html,
+html,
 body {
   height: 100%;
   background-color: rgb(32, 32, 32);
+  color: white;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  .label {
-    color: $white;
-    font-size: large;
-  }
-}
-article {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 25px;
-  justify-content: space-evenly;
-}
-
-.rect {
-  .label {
-    color: red;
-  }
-}
-
-.circle {
-  .label {
-    color: orange;
-  }
-}
-
-.ellipse {
-  .label {
-    color: yellow;
-  }
-}
-
-.parallelogram {
-  .label {
-    color: green;
-  }
-}
-
-.trapecia {
-  .label {
-    color: lighten(blue, 20%);
-  }
-}
-
-.triangle {
-  .label {
-    color: lighten(purple, 10%);
-  }
+li span {
+  cursor: pointer;
 }
