@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/quicksand-v19-latin-regular.eot);
+  /* IE9 Compat Modes */
+  src: local(""), url(fonts/quicksand-v19-latin-regular.eot?#iefix) format("embedded-opentype"), url(fonts/quicksand-v19-latin-regular.woff2) format("woff2"), url(fonts/quicksand-v19-latin-regular.woff) format("woff"), url(fonts/quicksand-v19-latin-regular.ttf) format("truetype"), url(fonts/quicksand-v19-latin-regular.svg#Quicksand) format("svg");
+  /* Legacy iOS */ }
+
+/* quicksand-700 - latin */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/quicksand-v20-latin-700.eot);
+  /* IE9 Compat Modes */
+  src: local(""), url(fonts/quicksand-v20-latin-700.eot?#iefix) format("embedded-opentype"), url(fonts/quicksand-v20-latin-700.woff2) format("woff2"), url(fonts/quicksand-v20-latin-700.woff) format("woff"), url(fonts/quicksand-v20-latin-700.ttf) format("truetype"), url(fonts/quicksand-v20-latin-700.svg#Quicksand) format("svg");
+  /* Legacy iOS */ }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/montserrat-v14-latin-regular.eot);
+  /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(fonts/montserrat-v14-latin-regular.eot?#iefix) format("embedded-opentype"), url(fonts/montserrat-v14-latin-regular.woff2) format("woff2"), url(fonts/montserrat-v14-latin-regular.woff) format("woff"), url(fonts/montserrat-v14-latin-regular.ttf) format("truetype"), url(fonts/montserrat-v14-latin-regular.svg#Montserrat) format("svg");
+  /* Legacy iOS */ }
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/montserrat-v14-latin-700.eot);
+  /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url(fonts/montserrat-v14-latin-700.eot?#iefix) format("embedded-opentype"), url(fonts/montserrat-v14-latin-700.woff2) format("woff2"), url(fonts/montserrat-v14-latin-700.woff) format("woff"), url(fonts/montserrat-v14-latin-700.ttf) format("truetype"), url(fonts/montserrat-v14-latin-700.svg#Montserrat) format("svg");
+  /* Legacy iOS */ }
+
+/* montserrat-regular - cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/montserrat-v14-cyrillic-regular.eot);
+  /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(fonts/montserrat-v14-cyrillic-regular.eot?#iefix) format("embedded-opentype"), url(fonts/montserrat-v14-cyrillic-regular.woff2) format("woff2"), url(fonts/montserrat-v14-cyrillic-regular.woff) format("woff"), url(fonts/montserrat-v14-cyrillic-regular.ttf) format("truetype"), url(fonts/montserrat-v14-cyrillic-regular.svg#Montserrat) format("svg");
+  /* Legacy iOS */ }
+
+/* montserrat-700 - cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/montserrat-v14-cyrillic-700.eot);
+  /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url(fonts/montserrat-v14-cyrillic-700.eot?#iefix) format("embedded-opentype"), url(fonts/montserrat-v14-cyrillic-700.woff2) format("woff2"), url(fonts/montserrat-v14-cyrillic-700.woff) format("woff"), url(fonts/montserrat-v14-cyrillic-700.ttf) format("truetype"), url(fonts/montserrat-v14-cyrillic-700.svg#Montserrat) format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/open-sans-v17-latin_cyrillic-regular.eot);
+  /* IE9 Compat Modes */
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(fonts/open-sans-v17-latin_cyrillic-regular.eot?#iefix) format("embedded-opentype"), url(fonts/open-sans-v17-latin_cyrillic-regular.woff2) format("woff2"), url(fonts/open-sans-v17-latin_cyrillic-regular.woff) format("woff"), url(fonts/open-sans-v17-latin_cyrillic-regular.ttf) format("truetype"), url(fonts/open-sans-v17-latin_cyrillic-regular.svg#OpenSans) format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/open-sans-v17-latin_cyrillic-700.eot);
+  /* IE9 Compat Modes */
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(fonts/open-sans-v17-latin_cyrillic-700.eot?#iefix) format("embedded-opentype"), url(fonts/open-sans-v17-latin_cyrillic-700.woff2) format("woff2"), url(fonts/open-sans-v17-latin_cyrillic-700.woff) format("woff"), url(fonts/open-sans-v17-latin_cyrillic-700.ttf) format("truetype"), url(fonts/open-sans-v17-latin_cyrillic-700.svg#OpenSans) format("svg");
+  /* Legacy iOS */ }
+
+.button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none; }
+  .button_theme_simple {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #ffffff; }
+  .button_theme_simple-colorized {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-transform: uppercase;
+    /* Primary Color */
+    color: #bc9cff !important; }
+  .button_theme_border {
+    width: 99px;
+    height: 44px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-transform: uppercase;
+    /* Primary Color */
+    color: #bc9cff;
+    position: relative; }
+    .button_theme_border::after {
+      display: block;
+      content: "";
+      width: inherit;
+      height: inherit;
+      border: 2px solid;
+      border-radius: 22px;
+      border-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      z-index: -100;
+      position: absolute;
+      top: 0px; }
+    .button_theme_border:active::after {
+      opacity: 0.5; }
+  .button_theme_border-background {
+    width: 99px;
+    height: 44px;
+    /* Primary Gradient */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative; }
+    .button_theme_border-background::after {
+      display: block;
+      content: "";
+      width: inherit;
+      height: inherit;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      border-radius: 22px;
+      z-index: -100;
+      position: absolute;
+      top: 0px; }
+    .button_theme_border-background:active::after {
+      opacity: 0.5; }
+  .button_theme_long {
+    width: 320px;
+    height: 44px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    /* Primary Gradient */
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 22px;
+    position: relative;
+    flex: 1; }
+    .button_theme_long::after {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      right: -10px;
+      top: 0px;
+      content: "arrow_forward";
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      text-transform: lowercase; }
+
+html,
+body {
+  height: 100%;
+  background-color: #202020;
+  color: white; }
+
+li span {
+  cursor: pointer; }
+
+
+/*# sourceMappingURL=main.css.map*/
